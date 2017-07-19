@@ -1,0 +1,177 @@
+/*
+	EHT - Overview - Learning Info
+	-------------------------------------------
+	Typography
+	Page Structure
+	Content & Media
+	Misc
+---------------------------------------------
+*/
+
+
+
+/* Page Structure */
+
+.add_subjects {
+	width: 900px;
+}
+
+.difficulty_wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.difficulty_radiobuttons {
+	display: flex;
+	flex-direction: row;
+	margin-top: 15px;
+	margin-bottom: 25px;
+}
+
+.difficulty_checkbox {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.issue_divider {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 25px;
+}
+
+.left {
+	margin-right: 20px;
+}
+
+/* Content & Media */
+
+/* Difficulty Radio Buttons*/
+/* 1 */
+.difficulty_1 input {
+	display: none;
+}
+
+.difficulty_1 span {
+	width: 32px;
+	height: 32px;
+	display: block;
+	background: url("/img/radiobutton_1_unchecked.svg");
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	padding: 5px;
+}
+
+.difficulty_1 input:checked + span {
+	width: 32px;
+	height: 32px;
+	display: block;
+	background: url("/img/radiobutton_1.svg");
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	padding: 5px;
+}
+
+/* 2 */
+.difficulty_2 input {
+	display: none;
+}
+
+.difficulty_2 span {
+	width: 32px;
+	height: 32px;
+	display: block;
+	background: url("/img/radiobutton_2_unchecked.svg");
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	padding: 5px;
+}
+
+.difficulty_2 input:checked + span {
+	width: 32px;
+	height: 32px;
+	display: block;
+	background: url("/img/radiobutton_2.svg");
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	padding: 5px;
+}
+
+/* 3 */
+.difficulty_3 input {
+	display: none;
+}
+
+.difficulty_3 span {
+	width: 32px;
+	height: 32px;
+	display: block;
+	background: url("/img/radiobutton_3_unchecked.svg");
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	padding: 5px;
+}
+
+.difficulty_3 input:checked + span {
+	width: 32px;
+	height: 32px;
+	display: block;
+	background: url("/img/radiobutton_3.svg");
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	padding: 5px;
+}
+
+/* 4 */
+.difficulty_4 input {
+	display: none;
+}
+
+.difficulty_4 span {
+	width: 32px;
+	height: 32px;
+	display: block;
+	background: url("/img/radiobutton_4_unchecked.svg");
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	padding: 5px;
+}
+
+.difficulty_4 input:checked + span {
+	width: 32px;
+	height: 32px;
+	display: block;
+	background: url("/img/radiobutton_4.svg");
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	padding: 5px;
+}
+
+/* 5 */
+.difficulty_5 input {
+	display: none;
+}
+
+.difficulty_5 span {
+	width: 32px;
+	height: 32px;
+	display: block;
+	background: url("/img/radiobutton_5_unchecked.svg");
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	padding: 5px;
+}
+
+.difficulty_5 input:checked + span {
+	width: 32px;
+	height: 32px;
+	display: block;
+	background: url("/img/radiobutton_5.svg");
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	padding: 5px;
+}

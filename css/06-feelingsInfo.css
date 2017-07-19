@@ -1,0 +1,47 @@
+/*
+	EHT - Overview - Global
+=============================================
+	Typography
+	Page Structure
+	Content & Media
+	Misc
+=============================================
+*/
+
+table {
+	margin-bottom: 20px;
+}
+
+th {
+	padding: 10px;
+	border-bottom: 2px solid #666;
+}
+
+td {
+	padding: 5px;
+}
+
+.question:hover {
+	background-color: #EFEFEF;
+}
+
+td.space {
+	padding-right: 20px;
+}
+
+.feelings_container {
+	width: 50%;
+	margin-top: 100px;
+}
+
+
+
+/*
+tr:nth-child(even) {
+	background: #EFEFEF;
+}
+
+tr:nth-child(odd) {
+	background: #FFF;
+}
+*/

@@ -1,0 +1,12 @@
+#admin_wrapper {
+	display: flex;
+	flex-direction: row;
+	margin-top: 50px;
+	flex-wrap: wrap;
+}
+
+
+
+.admin {
+	width: 300px;
+}

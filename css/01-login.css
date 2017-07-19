@@ -1,0 +1,82 @@
+/*
+	EHT - Overview - Login
+	-------------------------------------------
+	Typography
+	Page Structure
+	Content & Media
+	Misc
+---------------------------------------------
+*/
+
+/*
+Typography
+*/
+
+p.input {
+	color: #666;
+	margin-bottom: 5px;
+	padding-left: 0px;
+}
+
+p#error {
+	color: #86181d;
+}
+
+a.close {
+	color: #b6666b;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a.close:hover {
+	color: #86181d;
+}
+
+/*
+Page Structure
+*/
+
+.wrapper {
+	margin-top: 50px;
+}
+
+.error_container {
+	align-items: center;
+	background-color: #ffdce0;
+	border-radius: 5px;
+	border: 1px solid #ddc0c4;
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	padding: 10px;
+	width: 380px;
+  justify-content: space-around;
+}
+
+
+/*
+Content & Media
+*/
+
+img.logo {
+	display: block;
+	height: auto;
+	margin: 0 auto;
+	width: 350px;
+}
+
+#txtEmail, #txtPassword {
+	width: 100%;
+}
+
+.login_button {
+	background-color: #32c854;
+	border: 1px solid #2fac4d;
+	width: 100%;
+}
+
+.login_button:hover {
+	background-color: #28a745;
+	cursor: pointer;
+}
+

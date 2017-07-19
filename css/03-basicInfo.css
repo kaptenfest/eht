@@ -1,0 +1,64 @@
+/*
+	EHT - Overview - Basic Info
+	-------------------------------------------
+	Typography
+	Page Structure
+	Content & Media
+	Misc
+---------------------------------------------
+*/
+
+
+/* Page Structure */
+.basic_info_wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 100px;
+}
+
+.teacher_container, .student_container {
+	width: 400px;
+}
+
+/* Content & Media */
+
+/* Teacher Inputs */
+#teacher_name {
+	width: 50%;
+	margin-right: 5%;
+}
+
+#teacher_class {
+	width: 40%;
+	margin-right: 5%;
+}
+
+#teacher_subject {
+	width: 50%;
+}
+
+/* Student Inputs */
+#student_name {
+	width: 50%;
+	margin-right: 5%;
+}
+
+#student_age {
+	width: 40%;
+	margin-right: 5%;
+}
+
+#student_class {
+	width: 30%;
+	margin-right: 5%;
+}
+
+#student_mentor {
+	width: 60%;
+	margin-right: 5%;
+}
+
+#student_time {
+	width: 45%;
+}

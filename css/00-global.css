@@ -1,0 +1,536 @@
+/*
+	EHT - Overview - Global
+=============================================
+	Typography
+	Page Structure
+	Content & Media
+	Misc
+=============================================
+*/
+
+
+/* 
+	Typography 
+	-------------------------------------------
+*/
+
+h1 {
+	color: #000;
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+	font-family: "Open Sans";
+	font-size: 16px;
+	color: #666;
+}
+
+h2.header {
+	color: #666;
+  display: inline;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  padding-left: 30px;
+}
+
+span.left_padding {
+	padding-left: 30px;
+	color: #555555;
+}
+
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+}
+
+p.bar {
+	padding: 3px;
+	padding-left: 5px;
+	color: #FFF;
+	font-weight: 700;
+	box-shadow: 3px 3px 0px 0px #CCC;
+}
+
+p.learning_bar {
+	padding: 3px;
+	padding-left: 5px;
+	color: #FFF;
+	font-weight: 700;
+	box-shadow: 3px 3px 0px 0px #CCC;
+}
+
+
+p.info {
+	font-size: 12px;
+	padding: 0;
+	margin: 5px;
+}
+
+span.bold {
+	font-weight: 700;
+}
+
+span.regular {
+	font-weight: 400;
+}
+
+span.bold_grey {
+	font-weight: 700;
+	color: #333;
+}
+
+span.padding {
+	padding: 1px;
+}
+
+
+
+a.log_out {
+	color: #b92e19;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	padding-right: 30px;
+	text-decoration: none;
+}
+
+a.log_out:hover {
+	color: #86181d;
+}
+
+a.log_out_footer {
+	color: #A13D25;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	padding-right: 30px;
+	text-decoration: none;
+}
+
+a.log_out_footer:hover {
+	color: #e74d35;
+}
+
+/* 
+	Page Structure 
+	-------------------------------------------
+*/
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+	background-color: #f9f9f9;
+	margin: 0 0 100px;
+}
+
+header {
+	display: flex;
+	flex-direction: row; 	
+	justify-content: space-between;
+	align-items: center;
+	background-color: #FEFEFE;
+	position: fixed;
+	width: 100%;
+	height: 30px;
+	top: 0;
+	border-bottom: 1px solid #CCC;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+
+/* WRAPPERS */
+.center_wrapper {
+	width: 960px;
+	margin: 100px auto;
+	min-height: calc(100vh - 50px);
+}
+
+.left_flex_wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin-top: 100px;
+}
+
+.left_wrapper {
+	padding: 20px;
+	margin-top: 5px;
+	margin-bottom: 30px;
+	margin-right: 20px;
+}
+
+/* FOOTER */
+.footer {
+	   position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+
+	background-color: #1a1a1a;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+
+/* CONTAINERS */
+.container {
+	background-color: #FFF;
+	border-radius: 5px;
+	border: 1px solid #d8dee2;
+	margin: 15px 30px;
+	padding: 20px;
+	box-shadow: 0px 5px 5px 0px #CCC;
+}
+
+
+
+.progress_bar {
+	background-color: #5f92c7;
+	height: 5px;
+	position: fixed;
+	top: 45px;
+}
+
+
+
+.login_createUser_container {
+	width: 360px;
+	margin: 20px auto;
+
+}
+
+/* 
+	Options -- Choose Errand - Choose Admin	
+*/
+.options_container {
+	align-items: center;
+	background-color: #FFF;
+	border-radius: 3px;
+	border: 1px solid #CCC;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 20px;
+	padding: 20px;
+	width: 30%;
+	box-shadow: 0px 5px 5px 0px #CCC;
+}
+
+.options_container:hover {
+	background-color: #EFEFEF;
+	cursor: pointer;
+}
+
+.options_wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+/* 
+	Content & Media 
+	-------------------------------------------
+*/
+
+input {
+	border-radius: 3px;
+	border: 1px solid #d8dee2;
+	box-sizing: border-box;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
+input:focus {
+	border: 1px solid #999;
+  outline: none;
+}
+
+/* SELECT */
+#selecter {
+	color: #000;
+	font-size: 16px;
+	width: 400px;
+	padding: 5px;
+}
+
+#selecter:active, #selecter:hover, #selecter:focus, #selecter option {
+	outline: none;
+}
+
+/* BUTTONS */
+
+/* Lägg till */
+button {
+	background-color: #32c854;
+	border-radius: 3px;
+	border: 1px solid #32c854;
+	box-sizing: border-box;
+	color: #FFF;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+button:hover {
+	background-color: #28a745;
+	cursor: pointer;
+}
+
+button:focus {
+	outline: none;
+}
+
+/* Ta bort */
+.delete {
+	color: #FFF;
+	background-color: #c83232;
+	border: 1px solid #aa2525;
+	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 100%;
+	border-radius: 3px;
+	box-sizing: border-box;
+}
+
+.delete:hover {
+	background-color: #a72828;
+}
+
+/* Nästa steg 
+.next_step {
+	display: block;
+	color: #FFF;
+	background-color: #32c854;
+	border: 1px solid #2fac4d;
+	padding: 15px;
+	width: 25%;
+	text-align: center;
+	text-decoration: none;
+	margin-left: 20px;
+	border-radius: 3px;
+}
+
+
+.next_step:hover {
+	background-color: #28a745;
+}
+*/
+
+/* Nästa steg Refactor!*/
+.next_step {
+	/* display: block; */
+	color: #32c854;
+	font-weight: 700;
+	/* padding: 15px; */
+	/* width: 25%; */
+	/* text-align: center; */
+	text-decoration: none;
+	margin-right: 40px;
+}
+
+.next_step:hover {
+	color: #28a745;
+	/* background-color: #28a745; */
+}
+
+
+/* 
+	Options -- Choose Errand - Choose Admin	
+*/
+img.option {
+	height: 102px;
+	width: auto;	
+}
+
+/* 
+	Radio Button	
+*/
+.radio input {
+	display: none;
+}
+
+.radio span {
+	width: 20px;
+	height: 20px;
+	display: block;
+	background: url("/img/radiobutton_unchecked.svg");
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	padding: 0px;
+	margin: 5px auto;
+}
+
+.radio input:checked + span {
+	width: 20px;
+	height: 20px;
+	display: block;
+	background: url("/img/radiobutton.svg");
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	padding: 0px;
+	margin: 5px auto;
+}
+
+.radio:hover {
+	cursor: pointer;
+}
+
+/* 
+	Checkboxes	
+*/
+.checkbox input {
+	display: none;
+}
+
+.checkbox span {
+	width: 20px;
+	height: 20px;
+	display: block;
+	background: url("/img/checkbox_unchecked.svg");
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	margin-left: 15px;
+}
+
+.checkbox input:checked + span {
+	width: 20px;
+	height: 20px;
+	display: block;
+	background: url("/img/checkbox.svg");
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+}
+
+/* 
+	Range	
+*/
+.range {
+	border: 0px;
+}
+
+.range:focus {
+	border: 0px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 30%;
+  margin-bottom: 0px;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: #CCC;
+}
+input[type=range]::-webkit-slider-thumb {
+  border: 1px solid #000000;
+  height: 15px;
+  width: 15px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #666;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+
+/* 
+	Misc 
+	-------------------------------------------
+*/
+
+#hide {
+	display: none;
+}
+
+#show {
+	display: flex;
+}
+
+.spinner_wrapper {
+  display: flex;
+  align-items: center;
+  min-height: 24em;
+  justify-content: center;
+}
+
+.spinner {
+    border: 7px solid #CCC; 
+    border-top: 7px solid #5f92c7;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+

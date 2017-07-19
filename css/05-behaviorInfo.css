@@ -1,0 +1,35 @@
+/*
+	EHT - Overview - Learning Info
+	-------------------------------------------
+	Typography
+	Page Structure
+	Content & Media
+	Misc
+---------------------------------------------
+*/
+
+
+
+/* Page Structure */
+
+.add_behavior {
+	width: 900px;
+}
+
+.post_behavior_container, .show_behavior_container {
+	width: 400px;
+}
+
+
+
+/* Content & Media */
+
+
+.row_align {
+	display: flex;
+	flex-direction: row;
+}
+
+input.behavior_range {
+	width: 100%;
+}
