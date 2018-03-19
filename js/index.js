@@ -33,7 +33,7 @@ import { createStore, applyMiddleware } from 'redux';
 	import reducers from './reducers';
 
 // React Router
-import {Router, Route, IndexRoute, Link, IndexLink, IndexRedirect, browserHistory} from 'react-router';
+import {Router, Route, IndexRoute, Link, IndexLink, IndexRedirect, hashHistory} from 'react-router';
 
 // Firebase 
 import * as firebase from "firebase";
@@ -46,7 +46,7 @@ import CreateUser from "./components/Create_User";
 import BrowseUsers from "./containers/Browse_Users";
 import BrowseErrands from "./containers/Browse_Errands";
 import BrowseErrandDetails from "./containers/Browse_ErrandDetails";
-
+import AdminLogin from "./components/Admin_Login";
 import Login from "./components/Login";
 import ErrandOptions from "./components/Errand_Options";
 import StudentBasicInfo from "./components/Student_BasicInfo";
@@ -67,23 +67,22 @@ ReactDOM.render(
 	<Provider store={createStoreWithMiddleware(reducers)}>
 	 	<Router history={hashHistory}>
 	 		<Route path='/' component={Login} />
-
-				<Route path='admin-options' component={AdminOptions} />
-				<Route path='create-user' component={CreateUser} />
-				<Route path='browse-users' component={BrowseUsers} />
-				<Route path='browse-errands/:id/:displayName' component={BrowseErrands} />
-				<Route path='browse-errand-details/:id/:errand_id/:displayName' component={BrowseErrandDetails} />
-
-
-				<Route path='errand-options' component={ErrandOptions} />
-				<Route path='student-basic-info' component={StudentBasicInfo} />
-				<Route path='student-learning-info' component={StudentLearningInfo} />
-				<Route path='student-behavior-info' component={StudentBehaviorInfo} />
-				<Route path='student-feelings-info' component={StudentFeelingsInfo} />
-				<Route path='student-summary' component={StudentSummary} />
+			<Route path='admin-options' component={AdminOptions} />
+			<Route path='admin-login' component={AdminLogin} />
+			<Route path='create-user' component={CreateUser} />
+			<Route path='browse-users' component={BrowseUsers} />
+			<Route path='browse-errands/:id/:displayName' component={BrowseErrands} />
+			<Route path='browse-errand-details/:id/:errand_id/:displayName' component={BrowseErrandDetails} />
+			<Route path='errand-options' component={ErrandOptions} />
+			<Route path='student-basic-info' component={StudentBasicInfo} />
+			<Route path='student-learning-info' component={StudentLearningInfo} />
+			<Route path='student-behavior-info' component={StudentBehaviorInfo} />
+			<Route path='student-feelings-info' component={StudentFeelingsInfo} />
+			<Route path='student-summary' component={StudentSummary} />
 		</Router>
 	</Provider>,
 	app
 );
 
-// <Route path='admin-login' component={AdminLogin} />
+// 
+

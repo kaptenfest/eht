@@ -21,6 +21,7 @@ createUser(){
 browseUsers(){
 	firebase.auth().onAuthStateChanged(user => {
 	  if(user){
+	  	console.log("User: ", user)
 			hashHistory.push('/browse-users');
 	  }
 	})
@@ -52,7 +53,7 @@ render(){
 						<p>Visa användare</p>
 					</div>
 
-					<Link to="/" onClick={this.logOut} className="log_out">Logga ut</Link>
+					<Link to="/admin-login" onClick={this.logOut} className="log_out">Logga ut</Link>
 
 	
 				</div>

@@ -27,7 +27,7 @@ export class AdminErrands extends Component {
         }
   
         else{
-         hashHistory.push('admin')
+         hashHistory.push('admin-login')
         }
       })
 

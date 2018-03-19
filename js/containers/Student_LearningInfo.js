@@ -61,7 +61,28 @@ export class StudentLearningInfo extends Component {
       followInstructionsIssue: false,
       amountsIssue: false,
       strategiesIssue: false,
-      numbersIssue: false
+      numbersIssue: false,
+      
+      bild: false,
+      biologi: false,
+      engelska: false,
+      fysik: false,
+      geografi: false,
+      hemkunskap: false,
+      historia: false,
+      idrott: false,
+      kemi: false,
+      matematik: false,
+      modernaSprak: false,
+      musik: false,
+      no: false,
+      religionskunskap: false,
+      so: false,
+      samhallskunskap: false,
+      slojd: false,
+      svenska: false,
+      teknik: false,
+
 
     }
   }
@@ -395,10 +416,74 @@ export class StudentLearningInfo extends Component {
   handleFormSubmit(formSubmitEvent){
     formSubmitEvent.preventDefault();
 
+    switch (this.state.subjectValue) {
+      case 'Bild':
+        this.setState({bild: true});
+        break;
+      case 'Biologi':
+        this.setState({biologi: true});
+        break;
+      case 'Engelska':
+        this.setState({engelska: true});
+        break;
+      case 'Fysik':
+        this.setState({fysik: true});
+        break;
+      case 'Geografi':
+        this.setState({geografi: true});
+        break;
+      case 'Hemkunskap':
+        this.setState({hemkunskap: true});
+        break;
+      case 'Historia':
+        this.setState({historia: true});
+        break;
+      case 'Idrott':
+        this.setState({idrott: true});
+        break;
+      case 'Kemi':
+        this.setState({kemi: true});
+        break;
+      case 'Matematik':
+        this.setState({matematik: true});
+        break;
+      case 'Moderna språk':
+        this.setState({modernaSprak: true});
+        break;
+      case 'Musik':
+        this.setState({musik: true});
+        break;
+      case 'NO':
+        this.setState({no: true});
+        break;
+      case 'Religionskunskap':
+        this.setState({religionskunskap: true});
+        break;
+      case 'SO':
+        this.setState({so: true});
+        break;
+      case 'Samhällskunskap':
+        this.setState({samhallskunskap: true});
+        break;
+      case 'Slöjd':
+        this.setState({slojd: true});
+        break;
+      case 'Svenska':
+        this.setState({svenska: true});
+        break;
+      case 'Teknik':
+        this.setState({teknik: true});
+        break;                                                                                                                        
+      default:
+        console.log('No subject selected');
+    }
+
     firebase.auth().onAuthStateChanged(user => {
       if(user){
         for (var currentErrandID in this.props.userDatabase[0]);
       }
+
+    console.log("this.state.subjectValue: ", this.state.subjectValue);
     
     this.setState({learningInput:"hide"})
 
@@ -433,12 +518,90 @@ export class StudentLearningInfo extends Component {
 
     for(var learningID in this.props.currentErrandReducer[0].learning){
 
+    var width = {
+      width: this.props.currentErrandReducer[0].learning[learningID].difficulty * 10 + "%",
+    };
+
+    var width_frequency = {
+      width: this.props.currentErrandReducer[0].learning[learningID].frequency * 10 + "%",
+    }    
+
+    var color = {
+      backgroundColor: "green"
+    }
+
+    var color_frequency = {
+      backgroundColor: "green"
+    }    
+
+    if(this.props.currentErrandReducer[0].learning[learningID].difficulty === "1"){
+      color = {
+        backgroundColor: "#CD3C1F"
+      }
+    }
+
+    if(this.props.currentErrandReducer[0].learning[learningID].difficulty === "2"){
+      color = {
+        backgroundColor: "#CD5C1F"
+      }
+    }
+
+    if(this.props.currentErrandReducer[0].learning[learningID].difficulty === "3"){
+      color = {
+        backgroundColor: "#CD7D1F"
+      }
+    }
+
+    if(this.props.currentErrandReducer[0].learning[learningID].difficulty === "4"){
+      color = {
+        backgroundColor: "#C7CD1F"
+      }
+    }
+
+    if(this.props.currentErrandReducer[0].learning[learningID].difficulty === "5"){
+      color = {
+        backgroundColor: "#1FCD31"
+      }
+    }
+
+    if(this.props.currentErrandReducer[0].learning[learningID].frequency === "5"){
+      color_frequency = {
+        backgroundColor: "#CD3C1F"
+      }
+    }
+
+    if(this.props.currentErrandReducer[0].learning[learningID].frequency === "4"){
+      color_frequency = {
+        backgroundColor: "#CD5C1F"
+      }
+    }
+
+    if(this.props.currentErrandReducer[0].learning[learningID].frequency === "3"){
+      color_frequency = {
+        backgroundColor: "#CD7D1F"
+      }
+    }
+
+    if(this.props.currentErrandReducer[0].learning[learningID].frequency === "2"){
+      color_frequency = {
+        backgroundColor: "#C7CD1F"
+      }
+    }
+
+    if(this.props.currentErrandReducer[0].learning[learningID].frequency === "1"){
+      color_frequency = {
+        backgroundColor: "#1FCD31"
+      }
+    }     
+
       subjectArray.push(
         <div key={learningID} className="container">
 
           <h1>{this.props.currentErrandReducer[0].learning[learningID].subject}</h1>
-          <p><span className="bold_grey">Måluppfyllnad: </span> {this.props.currentErrandReducer[0].learning[learningID].difficulty}</p>
           
+          <p><span className="bold_grey">Måluppfyllnad: </span></p>
+          <div className="learning_bar" style={Object.assign(width, color)}><p className="learning_bar">{this.props.currentErrandReducer[0].learning[learningID].difficulty}</p></div>
+
           <p><span className="bold_grey">Inlärningssvårigheter:</span></p>
           {this.props.currentErrandReducer[0].learning[learningID].onsetIssue === true ? <p>Ingångsättning</p> : <p id="hide"></p>}
           {this.props.currentErrandReducer[0].learning[learningID].staminaIssue === true ? <p>Uthållighet</p> : <p id="hide"></p>}
@@ -465,8 +628,10 @@ export class StudentLearningInfo extends Component {
           this.props.currentErrandReducer[0].learning[learningID].amountsIssue === false &&
           this.props.currentErrandReducer[0].learning[learningID].strategiesIssue === false &&
           this.props.currentErrandReducer[0].learning[learningID].numbersIssue === false ? <p>Inga områden valda</p> : <p id="hide"></p>}
-          <p><span className="bold_grey">Hur ofta sker inlärningssvårigheterna:</span> {this.props.currentErrandReducer[0].learning[learningID].frequency}</p>
-          <button className="delete" onClick={this.delSubject.bind(this, learningID)}>Radera ämne</button>
+          
+          <p><span className="bold_grey">Hur ofta sker inlärningssvårigheterna:</span></p>
+          <div className="learning_bar" style={Object.assign(width_frequency, color_frequency)}><p className="learning_bar">{this.props.currentErrandReducer[0].learning[learningID].frequency}</p></div>
+          <button className="delete" onClick={this.delSubject.bind(this, learningID, this.props.currentErrandReducer[0].learning[learningID].subject)}>Radera ämne</button>
         </div>
       )
 
@@ -475,19 +640,80 @@ export class StudentLearningInfo extends Component {
     return(
       <div className="subject_wrapper">
         {subjectArray}
-        
       </div>
     )
 
   }
 
 
-  delSubject(learningID){
+  delSubject(learningID, subject){
 
     firebase.auth().onAuthStateChanged(user => {
       if(user){
         for (var currentErrandID in this.props.userDatabase[0]);
       }
+
+    switch (subject) {
+      case 'Bild':
+        this.setState({bild: false});
+        break;
+      case 'Biologi':
+        this.setState({biologi: false});
+        break;
+      case 'Engelska':
+        this.setState({engelska: false});
+        break;
+      case 'Fysik':
+        this.setState({fysik: false});
+        break;
+      case 'Geografi':
+        this.setState({geografi: false});
+        break;
+      case 'Hemkunskap':
+        this.setState({hemkunskap: false});
+        break;
+      case 'Historia':
+        this.setState({historia: false});
+        break;
+      case 'Idrott':
+        this.setState({idrott: false});
+        break;
+      case 'Kemi':
+        this.setState({kemi: false});
+        break;
+      case 'Matematik':
+        this.setState({matematik: false});
+        break;
+      case 'Moderna språk':
+        this.setState({modernaSprak: false});
+        break;
+      case 'Musik':
+        this.setState({musik: false});
+        break;
+      case 'NO':
+        this.setState({no: false});
+        break;
+      case 'Religionskunskap':
+        this.setState({religionskunskap: false});
+        break;
+      case 'SO':
+        this.setState({so: false});
+        break;
+      case 'Samhällskunskap':
+        this.setState({samhallskunskap: false});
+        break;
+      case 'Slöjd':
+        this.setState({slojd: false});
+        break;
+      case 'Svenska':
+        this.setState({svenska: false});
+        break;
+      case 'Teknik':
+        this.setState({teknik: false});
+        break;                                                                                                                        
+      default:
+        console.log('No subject selected');
+    }
 
     deleteSelectedSubject(user.uid, currentErrandID, user.displayName, learningID);
 
@@ -499,7 +725,10 @@ export class StudentLearningInfo extends Component {
   // TODO: postLearning ska vara en link och
   // skicka vidare till nästa steg
   render() {
-
+    ///
+    // TODO
+    //
+    // => If value is something in the "list" set that option to disabled
     const progressWidth = {
       width: '40%',
     };
@@ -520,25 +749,25 @@ export class StudentLearningInfo extends Component {
               <div className="container">
               <select id="selecter" onClick={this.clearForm.bind(this)} onChange={this.showLearning.bind(this)}>
                 <option selected disabled>Välj ett ämne att lägga till:</option>
-                <option value="Bild">Bild</option>
-                <option value="Biologi">Biologi</option>
-                <option value="Engelska">Engelska</option>
-                <option value="Fysik">Fysik</option>
-                <option value="Geografi">Geografi</option>
-                <option value="Hemkunskap">Hemkunskap</option>
-                <option value="Historia">Historia</option>
-                <option value="Idrott">Idrott</option>
-                <option value="Kemi">Kemi</option>
-                <option value="Matematik">Matematik</option>
-                <option value="Moderna språk">Moderna språk</option>
-                <option value="Musik">Musik</option>
-                <option value="NO">NO</option>
-                <option value="Religionskunskap">Religionskunskap</option>
-                <option value="SO">SO</option>
-                <option value="Samhällskunskap">Samhällskunskap</option>
-                <option value="Slöjd">Slöjd</option>
-                <option value="Svenska">Svenska</option>
-                <option value="Teknik">Teknik</option>
+                <option disabled={this.state.bild} value="Bild">Bild</option>
+                <option disabled={this.state.biologi} value="Biologi">Biologi</option>
+                <option disabled={this.state.engelska} value="Engelska">Engelska</option>
+                <option disabled={this.state.fysik} value="Fysik">Fysik</option>
+                <option disabled={this.state.geografi} value="Geografi">Geografi</option>
+                <option disabled={this.state.hemkunskap} value="Hemkunskap">Hemkunskap</option>
+                <option disabled={this.state.historia} value="Historia">Historia</option>
+                <option disabled={this.state.idrott} value="Idrott">Idrott</option>
+                <option disabled={this.state.kemi} value="Kemi">Kemi</option>
+                <option disabled={this.state.matematik} value="Matematik">Matematik</option>
+                <option disabled={this.state.modernaSprak} value="Moderna språk">Moderna språk</option>
+                <option disabled={this.state.musik} value="Musik">Musik</option>
+                <option disabled={this.state.no} value="NO">NO</option>
+                <option disabled={this.state.religionskunskap} value="Religionskunskap">Religionskunskap</option>
+                <option disabled={this.state.so} value="SO">SO</option>
+                <option disabled={this.state.samhallskunskap} value="Samhällskunskap">Samhällskunskap</option>
+                <option disabled={this.state.slojd} value="Slöjd">Slöjd</option>
+                <option disabled={this.state.svenska} value="Svenska">Svenska</option>
+                <option disabled={this.state.teknik} value="Teknik">Teknik</option>
               </select>
               </div>
 

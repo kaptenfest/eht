@@ -67,10 +67,7 @@ render(){
 						<p>Enskild elev</p>
 					</div>
 						
-					<div className="options_container" onClick={this.groupErrand}>
-						<img className="option" src="./img/choose_group.svg"/>
-						<p>Grupp</p>
-					</div>
+
 
 				</div>
 
@@ -87,3 +84,13 @@ render(){
 }
 
 // <Link to="/" onClick={this.logOut} className="log_out">Logga ut</Link>
+
+/*
+	
+	Implement in the future
+
+	<div className="options_container" onClick={this.groupErrand}>
+		<img className="option" src="./img/choose_group.svg"/>
+		<p>Grupp</p>
+	</div>
+*/

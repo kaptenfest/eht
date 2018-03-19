@@ -15661,6 +15661,7 @@ var ErrandOptions = function (_Component) {
 		value: function browseUsers() {
 			firebase.auth().onAuthStateChanged(function (user) {
 				if (user) {
+					console.log("User: ", user);
 					_reactRouter.hashHistory.push('/browse-users');
 				}
 			});
@@ -21406,8 +21407,8 @@ _reactDom2.default.render(_react2.default.createElement(
 		_reactRouter.Router,
 		{ history: _reactRouter.hashHistory },
 		_react2.default.createElement(_reactRouter.Route, { path: "/", component: _Login2.default }),
-		_react2.default.createElement(_reactRouter.Route, { path: "admin", component: _Admin_Login2.default }),
 		_react2.default.createElement(_reactRouter.Route, { path: "admin-options", component: _Admin_Options2.default }),
+		_react2.default.createElement(_reactRouter.Route, { path: "admin", component: _Admin_Login2.default }),
 		_react2.default.createElement(_reactRouter.Route, { path: "create-user", component: _Create_User2.default }),
 		_react2.default.createElement(_reactRouter.Route, { path: "browse-users", component: _Browse_Users2.default }),
 		_react2.default.createElement(_reactRouter.Route, { path: "browse-errands/:id/:displayName", component: _Browse_Errands2.default }),
@@ -21420,6 +21421,8 @@ _reactDom2.default.render(_react2.default.createElement(
 		_react2.default.createElement(_reactRouter.Route, { path: "student-summary", component: _Student_Summary2.default })
 	)
 ), app);
+
+// <Route path='admin-login' component={AdminLogin} />
 
 /***/ }),
 /* 166 */

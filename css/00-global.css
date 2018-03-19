@@ -145,7 +145,7 @@ header {
 .center_wrapper {
 	width: 960px;
 	margin: 100px auto;
-	min-height: calc(100vh - 50px);
+	/* min-height: calc(100vh - 50px); */
 }
 
 .left_flex_wrapper {
@@ -160,6 +160,10 @@ header {
 	margin-top: 5px;
 	margin-bottom: 30px;
 	margin-right: 20px;
+}
+
+.left-margin {
+	margin-left: 10px;
 }
 
 /* FOOTER */
@@ -327,12 +331,8 @@ button:focus {
 
 /* Nästa steg Refactor!*/
 .next_step {
-	/* display: block; */
 	color: #32c854;
 	font-weight: 700;
-	/* padding: 15px; */
-	/* width: 25%; */
-	/* text-align: center; */
 	text-decoration: none;
 	margin-right: 40px;
 }
@@ -340,6 +340,16 @@ button:focus {
 .next_step:hover {
 	color: #28a745;
 	/* background-color: #28a745; */
+}
+
+.next_step_basic {
+	color: #32c854;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.next_step_basic:hover {
+	color: #28a745;
 }
 
 
